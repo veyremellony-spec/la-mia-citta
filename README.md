@@ -76,47 +76,20 @@ python -m http.server 8080
 Puis ouvrir `http://localhost:8080`. (Sinon, l'extension **Live Server** de
 VS Code fait très bien l'affaire.)
 
----
-
-## 🌍 Mise en ligne (Infomaniak)
-
-Le site étant statique, il suffit de déposer les fichiers à la racine web du
-domaine.
-
-1. Dans le **Manager Infomaniak** → *Hébergement Web* → récupère les
-   identifiants **FTP/SFTP** (ou active l'accès **SSH**).
-2. Connecte-toi avec **FileZilla** (SFTP) et place le contenu du dépôt dans le
-   dossier web du site (généralement `sites/<ton-domaine>/`).
-3. Vérifie que **`index.html` est à la racine** de ce dossier.
-4. **HTTPS** : le certificat Let's Encrypt est fourni et activé automatiquement
-   par Infomaniak.
-
-> La vidéo du héro fonctionne directement : Apache/Nginx gèrent nativement les
-> requêtes de plage et le type `video/mp4`.
-
-> **À ne pas envoyer en ligne** : `dist/`, `*.zip`, et les exports du Design
-> System (déjà exclus par `.gitignore`).
-
----
-
-## 🛠 Stack
-
-- HTML5 sémantique, CSS moderne (variables, `clamp()`, grid, `aspect-ratio`).
-- JavaScript **vanilla**, sans dépendance ni build.
-- Polices : **Alio Text** (locale) et **Lexend** (Google Fonts).
-- État persistant via `localStorage` (langue, compte, favoris, utilisateurs bloqués).
-
----
+----
 
 ## 👤 Crédits
 
-Conçu et réalisé par **Mellony Veyre** — direction artistique, design UX/UI,
-identité visuelle et intégration front-end. Voir [`credits.html`](credits.html).
+Conçu et réalisé par **Mellony Veyre, Sarah Lechère et Gillian Tsanga** — direction artistique, design UX/UI, identité visuelle et intégration front-end. Voir [`credits.html`](credits.html).
 
 ## ⚖️ Mentions
 
 Projet de **démonstration** réalisé à des fins de présentation. **Non affilié**
 au Comité International Olympique ni à Milano Cortina 2026. Les marques,
 emblèmes et visuels olympiques appartiennent à leurs détenteurs respectifs.
+
+Projet réalisé dans un cadre pédagogique. Un site existe déjà à l'adresse
+lamiacitta.fr ; ce travail est un exercice et n'a pas vocation à le remplacer
+ou à être exploité.
 
 © 2026 Mellony Veyre.
