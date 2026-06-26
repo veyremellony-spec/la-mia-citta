@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Mia Città · Vivez Milano Cortina, où que vous soyez</title>
+  <meta name="description" content="L'application compagnon officielle des Jeux Olympiques d'hiver Milano Cortina 2026. Watchparties, réactions en live et carte interactive." />
+
+  <!-- Corps de texte : Lexend (Google Fonts). Les titres utilisent Alio Text (locale, voir styles.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+</head>
+<body>
+
+  <!-- Dégradé de marque réutilisable pour les tracés d'icônes (SVG stroke/fill) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="mcGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c0163e" />
+        <stop offset="22%" stop-color="#9c2b5c" />
+        <stop offset="40%" stop-color="#74437e" />
+        <stop offset="60%" stop-color="#3a65ae" />
+        <stop offset="80%" stop-color="#58918c" />
+        <stop offset="100%" stop-color="#76bc6b" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- =================================================================
+       NAVIGATION — pilule flottante « liquid glass » (sticky)
+       ================================================================= -->
+  <div class="mc-navwrap">
+    <header class="mc-nav">
+      <a class="mc-nav__brand" href="index.html" aria-label="La Mia Città, accueil">
+        <img class="mc-nav__logo" src="assets/img/logo-header.png" alt="" width="64" height="46" />
+        <span class="mc-nav__name">La Mia Città</span>
+      </a>
+      <nav class="mc-nav__links" aria-label="Navigation principale">
+        <a href="programme.html">Programme</a>
+        <a href="caffe26.html">CAFFÈ26</a>
+        <a href="carte.html">Carte</a>
+      </nav>
+      <div class="mc-nav__actions">
+        <img class="mc-nav__flag" src="assets/img/flag-fr.svg" alt="Français" width="31" height="24" />
+        <a class="mc-iconbtn" data-account href="onboarding.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- =================================================================
+         SECTION 1 — HÉRO (vidéo plein écran)
+         ================================================================= -->
+    <section class="mc-hero">
+      <video class="mc-hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/lieu.jpg">
+        <source src="assets/hero-web.mp4?v=12" type="video/mp4" />
+      </video>
+      <div class="mc-hero__overlay"></div>
+
+      <div class="mc-hero__text">
+        <h1 class="mc-hero__title"><span class="mc-hero__title-1">Vivez Milano Cortina</span><span class="mc-hero__title-2">Où que vous soyez</span></h1>
+        <p class="mc-hero__lead">Regardez les épreuves en watchparty, échangez sur les forums, vibrez avec la communauté Milano Cortina 2026.</p>
+        <a class="mc-pill" href="#caffe"><span class="mc-grad-text">Rejoindre le Village</span></a>
+      </div>
+    </section>
+
+    <div class="mc-page">
+      <!-- =================================================================
+           SECTION 2 — LE CAFFÈ26
+           ================================================================= -->
+      <section class="mc-section mc-caffe" id="caffe">
+        <div class="mc-wrap">
+          <h2 class="mc-h2 mc-grad-text">Le CAFFÈ26</h2>
+          <div class="mc-caffe__grid">
+            <div class="mc-caffe__left">
+              <p class="mc-lead">Rejoignez des millions de fans du monde entier. Participez à des watchparties virtuelles, partagez vos réactions et revivez les meilleurs moments ensemble.</p>
+
+              <ul class="mc-features">
+                <li class="mc-feature">
+                  <span class="mc-feature__icon">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#040509" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="15" rx="3"/><path d="M10 9l5 3-5 3z" fill="#040509" stroke="none"/></svg>
+                  </span>
+                  <div class="mc-feature__body">
+                    <h3>Watchparties Virtuelles</h3>
+                    <p>Regardez les épreuves en direct avec des fans du monde entier</p>
+                  </div>
+                </li>
+                <li class="mc-feature">
+                  <span class="mc-feature__icon">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#040509" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.7L3 21l1.8-5.8A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                  </span>
+                  <div class="mc-feature__body">
+                    <h3>Réactions en Live</h3>
+                    <p>Partagez vos émotions instantanément avec la communauté</p>
+                  </div>
+                </li>
+                <li class="mc-feature">
+                  <span class="mc-feature__icon">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#040509" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 10L4 15l5 5"/><path d="M4 15h11a5 5 0 0 0 5-5V4"/></svg>
+                  </span>
+                  <div class="mc-feature__body">
+                    <h3>Rediffusions commentées</h3>
+                    <p>Revivez les moments forts avec les commentaires de la communauté</p>
+                  </div>
+                </li>
+              </ul>
+
+              <a class="mc-pill" href="caffe26.html"><span class="mc-grad-text">Rejoindre le CAFFÈ26</span></a>
+            </div>
+
+            <!-- Carte communauté : conteneur dégradé translucide + posts blancs -->
+            <div class="mc-community">
+              <article class="mc-post">
+                <span class="mc-avatar"><img src="assets/img/av/sophie.png" alt="" /></span>
+                <div class="mc-post__main">
+                  <header class="mc-post__head"><span class="mc-post__name">Sophie Dubois</span>
+                    <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="France"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect width="1" height="2" x="2" fill="#EF4135"/></svg>
+                    <time>Il y a 2 minutes</time>
+                  </header>
+                  <p class="mc-post__msg">Quelle descente incroyable ! Les derniers virages étaient à couper le souffle !</p>
+                  <footer class="mc-post__meta">
+                    <input type="checkbox" id="li-sophie" class="mc-like-cb" hidden />
+                    <label class="mc-post__stat mc-like" for="li-sophie" aria-label="J'aime"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 2.4K</label>
+                    <span class="mc-post__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 183</span>
+                    <span class="mc-post__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                  </footer>
+                </div>
+              </article>
+
+              <article class="mc-post">
+                <span class="mc-avatar"><img src="assets/img/av/marco.png" alt="" /></span>
+                <div class="mc-post__main">
+                  <header class="mc-post__head"><span class="mc-post__name">Marco Rossi</span>
+                    <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="Italie"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#CE2B37"/></svg>
+                    <time>Il y a 5 minutes</time>
+                  </header>
+                  <!-- Traduction cliquable (toggle CSS) : coché = version FR affichée -->
+                  <input type="checkbox" id="tr-marco" class="mc-tr" checked hidden />
+                  <p class="mc-post__msg mc-msg-orig" lang="it">Forza Italia! Oro per la nostra squadra!</p>
+                  <p class="mc-post__msg mc-msg-fr">Forza Italia ! Médaille d'or pour notre équipe !</p>
+                  <footer class="mc-post__meta">
+                    <input type="checkbox" id="li-marco" class="mc-like-cb" hidden />
+                    <label class="mc-post__stat mc-like" for="li-marco" aria-label="J'aime"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 5.1K</label>
+                    <span class="mc-post__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 421</span>
+                    <span class="mc-post__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                    <label class="mc-post__translate" for="tr-marco">
+                      <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h7M8 4v2c0 3.6-1.8 6.2-4 7.7"/><path d="M5 10c1 1.7 3 3.1 5 3.6"/><path d="M13.5 19l3.2-7 3.2 7M14.9 16.2h3.6"/></svg>
+                      <span class="mc-tr-on">Traduction activée</span><span class="mc-tr-off">Traduire</span>
+                    </label>
+                  </footer>
+                </div>
+              </article>
+
+              <article class="mc-post">
+                <span class="mc-avatar"><img src="assets/img/av/emma.png" alt="" /></span>
+                <div class="mc-post__main">
+                  <header class="mc-post__head"><span class="mc-post__name">Emma Johnson</span>
+                    <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="Canada"><rect width="3" height="2" fill="#fff"/><rect width="0.75" height="2" fill="#FF0000"/><rect width="0.75" height="2" x="2.25" fill="#FF0000"/><path d="M1.5 0.6l.12.28.3-.05-.18.26.18.26-.3-.05-.12.28-.12-.28-.3.05.18-.26-.18-.26.3.05z" fill="#FF0000"/></svg>
+                    <time>Il y a 8 minutes</time>
+                  </header>
+                  <input type="checkbox" id="tr-emma" class="mc-tr" hidden />
+                  <p class="mc-post__msg mc-msg-orig" lang="en">Watching from Toronto! The atmosphere here is electric!</p>
+                  <p class="mc-post__msg mc-msg-fr">Je regarde depuis Toronto ! L'ambiance ici est électrique !</p>
+                  <footer class="mc-post__meta">
+                    <input type="checkbox" id="li-emma" class="mc-like-cb" hidden />
+                    <label class="mc-post__stat mc-like" for="li-emma" aria-label="J'aime"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 5.1K</label>
+                    <span class="mc-post__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 421</span>
+                    <span class="mc-post__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                    <label class="mc-post__translate" for="tr-emma">
+                      <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h7M8 4v2c0 3.6-1.8 6.2-4 7.7"/><path d="M5 10c1 1.7 3 3.1 5 3.6"/><path d="M13.5 19l3.2-7 3.2 7M14.9 16.2h3.6"/></svg>
+                      <span class="mc-tr-on">Traduction activée</span><span class="mc-tr-off">Traduire</span>
+                    </label>
+                  </footer>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           SECTION 3 — EXPLOREZ (carte interactive)
+           ================================================================= -->
+      <section class="mc-section" id="carte">
+        <div class="mc-wrap">
+          <div class="mc-map">
+            <!-- Cadre au ratio exact de Figma (1201×780) : l'image est recadrée
+                 comme dans la maquette → les pins se calent au pixel près. -->
+            <div class="mc-map__frame">
+              <img class="mc-map__img" src="assets/img/carte.png" alt="Carte de la région Milano Cortina" />
+              <h2 class="mc-map__title">Explorez Milano Cortina</h2>
+
+              <!-- 4 pins cliquables → ouvrent l'overlay (:target). Positions exactes Figma. -->
+              <a class="mc-mappin" style="left:27%; top:71%" href="#ov-milano" aria-label="Milan">
+                <span class="mc-mappin__dot">👑</span>
+              </a>
+              <a class="mc-mappin" style="left:47%; top:44%" href="#ov-bormio" aria-label="Bormio / Valdisotto">
+                <span class="mc-mappin__dot">⛷️</span>
+              </a>
+              <a class="mc-mappin" style="left:74%; top:37%" href="#ov-cortina" aria-label="Cortina">
+                <span class="mc-mappin__dot">❄️</span>
+              </a>
+              <a class="mc-mappin" style="left:56%; top:70%" href="#ov-verona" aria-label="Verona">
+                <span class="mc-mappin__dot">🕯️</span>
+              </a>
+            </div>
+
+            <!-- Barre d'infos blanche -->
+            <div class="mc-featurebar">
+              <a class="mc-pill" href="carte.html"><span class="mc-grad-text">Explorez la carte interactive</span></a>
+              <span class="mc-featurebar__sep" aria-hidden="true"></span>
+              <div class="mc-fact">
+                <span class="mc-fact__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+                </span>
+                <div class="mc-fact__body"><h3>Anecdotes &amp; Fun Facts</h3><p>Secrets et curiosités de chaque site</p></div>
+              </div>
+              <span class="mc-featurebar__sep" aria-hidden="true"></span>
+              <div class="mc-fact">
+                <span class="mc-fact__icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+                </span>
+                <div class="mc-fact__body"><h3>Itinéraires Virtuels</h3><p>Explorez les lieux en 360°</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           SECTION 4 — LA MIA CITTÀ
+           ================================================================= -->
+      <section class="mc-section mc-about" id="programme">
+        <div class="mc-wrap">
+          <h2 class="mc-h2 mc-grad-text mc-about__title">La Mia Città, votre maison le temps des Jeux</h2>
+          <div class="mc-about__grid">
+            <div class="mc-about__text">
+              <p>Du 6 au 22 février 2026, Milan et Cortina d'Ampezzo accueillent le monde. Mais les Jeux n'appartiennent pas qu'à ceux qui ont un billet.</p>
+              <p class="mc-grad-text">La Mia Città est une application compagnon conçue pour celles et ceux qui suivent les JO depuis leur salon, leur bureau, ou n'importe où ailleurs. Chaque descente, chaque triple axel, chaque médaille vécus avec la même intensité que dans les tribunes, depuis là où tu es.</p>
+              <!-- Stat qui défile (3 phrases en boucle, animation CSS) -->
+              <p class="mc-about__stat mc-rotate" aria-label="90+ pays dans la communauté · 1 village, partout dans le monde · 15 disciplines partagées en direct">
+                <span class="mc-rotate__item mc-grad-text">90+ pays dans la communauté</span>
+                <span class="mc-rotate__item mc-grad-text">1 village, partout dans le monde</span>
+                <span class="mc-rotate__item mc-grad-text">15 disciplines partagées en direct</span>
+              </p>
+            </div>
+            <div class="mc-about__media">
+              <img src="assets/img/lieu.jpg" alt="Site olympique de Milano Cortina" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           SECTION 5 — CTA TÉLÉCHARGEMENT
+           ================================================================= -->
+      <section class="mc-section mc-cta-wrap">
+        <div class="mc-wrap">
+          <div class="mc-cta">
+            <img class="mc-cta__bg" src="assets/img/cta-card.jpg" alt="" aria-hidden="true" />
+            <div class="mc-cta__inner">
+              <h2 class="mc-h2">Prêts à vivre Milano Cortina ?</h2>
+              <p class="mc-cta__lead">Téléchargez La Mia Città et rejoignez des millions de fans du monde entier. L'émotion olympique accessible à tous, où que vous soyez.</p>
+
+              <div class="mc-stores">
+                <a class="mc-store" href="#">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7C8.3 8 7 8.8 6.3 10.1c-1.4 2.4-.4 6 1 8 .7 1 1.5 2 2.5 2 1 0 1.4-.6 2.6-.6s1.5.6 2.6.6 1.7-.9 2.4-1.9c.7-1.1 1-2.1 1-2.2 0 0-1.9-.7-2-2.9zM14.5 6.3c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.4 1.2-.5.6-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1z"/></svg>
+                  <span><small>Télécharger sur</small><strong>App Store</strong></span>
+                </a>
+                <a class="mc-store" href="#">
+                  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="#34a853" d="M3.6 21.4l10-5.7-2.7-2.7z"/><path fill="#ea4335" d="M3.6 2.6l7.3 7.3 2.7-2.7z"/><path fill="#fbbc04" d="M16.9 9.3l-3.3-1.9-2.7 2.7 2.7 2.7 3.3-1.9c1-.6 1-1.1 0-1.6z"/><path fill="#4285f4" d="M3.6 2.6c-.3.2-.5.6-.5 1.1v16.6c0 .5.2.9.5 1.1l7.3-9z"/></svg>
+                  <span><small>DISPONIBLE SUR</small><strong>Google Play</strong></span>
+                </a>
+              </div>
+
+              <div class="mc-stats">
+                <div class="mc-stat"><span class="mc-stat__num">2.5M+</span><span class="mc-stat__label">Utilisateurs actifs</span></div>
+                <div class="mc-stat"><span class="mc-stat__num">4.8★</span><span class="mc-stat__label">Note moyenne</span></div>
+                <div class="mc-stat"><span class="mc-stat__num">150+</span><span class="mc-stat__label">Pays représentés</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =================================================================
+       PIED DE PAGE
+       ================================================================= -->
+  <footer class="mc-footer">
+    <div class="mc-wrap mc-footer__inner">
+      <div class="mc-footer__top">
+        <div class="mc-footer__brand">
+          <p class="mc-footer__tagline">L'application compagnon officielle des Jeux Olympiques d'hiver Milano Cortina 2026.</p>
+          <img class="mc-footer__logo" src="assets/img/logo-footer.png" alt="Mia Città" />
+        </div>
+        <div class="mc-footer__cols">
+          <nav class="mc-footer__col" aria-label="Fonctionnalités">
+            <h4>Fonctionnalités</h4>
+            <a href="programme.html">Programme</a><a href="caffe26.html">CAFFÈ26</a><a href="carte.html">Carte Interactive</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="À propos">
+            <h4>À propos</h4>
+            <a href="#">Milano Cortina 2026</a><a href="#">Partenaires</a><a href="credits.html">Crédits</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="Support">
+            <h4>Support</h4>
+            <a href="#">FAQ</a><a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <hr class="mc-footer__line" />
+      <div class="mc-footer__legal">
+        <p>Mentions Légales<br />Accessibilité</p>
+        <p>Politique des cookies<br />Paramètres de cookies</p>
+        <p>Politique de Confidentialité<br />Conditions d'Utilisations</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       OVERLAYS DES PINS — pop-up au clic (CSS :target, sans JS)
+       Composant .mc-ov réutilisé ×4 ; couleur d'accent via --ov.
+       ================================================================= -->
+  <div class="mc-ov" id="ov-milano" role="dialog" aria-modal="true" aria-label="Milano">
+    <a class="mc-ov__scrim" href="#carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#3a65ae">
+      <a class="mc-ov__close" href="#carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Hockey sur glace</span>
+      <h3 class="mc-ov__city mc-grad-text">Milano</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Anecdote</p>
+      <p class="mc-ov__text">Les Milanais ont une obsession quasi-religieuse pour le spritz, mais ils le font avec du Campari (pas de l'Aperol, c'est une affaire sérieuse). Des bars du centre ont littéralement perdu des clients en leur servant la mauvaise version. Pour eux, c'est à peu près aussi grave qu'une faute de goût en fashion week.</p>
+      <img class="mc-ov__photo" src="assets/img/ov/milano.jpg" alt="Milano" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-cortina" role="dialog" aria-modal="true" aria-label="Cortina d'Ampezzo">
+    <a class="mc-ov__scrim" href="#carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#76bc6b">
+      <a class="mc-ov__close" href="#carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Descente alpine</span>
+      <h3 class="mc-ov__city mc-grad-text">Cortina d'Ampezzo</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">Cortina d'Ampezzo se prend tellement au sérieux en tant que « reine des Dolomites » que la ville a officiellement refusé plusieurs fois d'être associée à des projets jugés « pas assez chics ». Il y a quelques années, une enseigne de fast-food a tenté de s'installer en centre-ville et s'est fait poliment mais fermement éconduire. À Cortina, même les chiens de traîneau portent probablement du Canada Goose.</p>
+      <img class="mc-ov__photo" src="assets/img/ov/cortina.jpg" alt="Cortina d'Ampezzo" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-verona" role="dialog" aria-modal="true" aria-label="Verona">
+    <a class="mc-ov__scrim" href="#carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#74437e">
+      <a class="mc-ov__close" href="#carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Cérémonies</span>
+      <h3 class="mc-ov__city mc-grad-text">Verona</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">L'Arena di Verona, amphithéâtre romain construit en l'an 30 apr. J.-C., accueillera les cérémonies de remise des médailles des JO 2026. L'une des arènes antiques les mieux conservées au monde, elle peut accueillir jusqu'à 22 000 spectateurs sous les étoiles.</p>
+      <img class="mc-ov__photo" src="assets/img/ov/verona.jpg" alt="Arena di Verona" loading="lazy" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-bormio" role="dialog" aria-modal="true" aria-label="Bormio">
+    <a class="mc-ov__scrim" href="#carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#c0163e">
+      <a class="mc-ov__close" href="#carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Ski Alpin</span>
+      <h3 class="mc-ov__city mc-grad-text">Bormio</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">La Stelvio est l'une des pistes les plus redoutées du circuit : 3,3 km de descente, 1 000 m de dénivelé et des passages à 65 % de pente. Elle accueille la Coupe du Monde depuis 1985 et voit les athlètes dépasser les 130 km/h.</p>
+      <img class="mc-ov__photo" src="assets/img/ov/bormio.jpg" alt="Bormio" loading="lazy" />
+    </div>
+  </div>
+
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/auth.js?v=12" defer></script>
+</body>
+</html>

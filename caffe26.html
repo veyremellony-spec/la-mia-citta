@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le CAFFÈ26 · La Mia Città</title>
+  <meta name="description" content="Le CAFFÈ26 : le coin où les fans du monde entier refont les Jeux. Watchparties en direct, réactions en temps réel et forums de la communauté Milano Cortina 2026." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+</head>
+<body>
+
+  <!-- Dégradé de marque réutilisable pour les tracés d'icônes (SVG stroke/fill) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="mcGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c0163e" />
+        <stop offset="22%" stop-color="#9c2b5c" />
+        <stop offset="40%" stop-color="#74437e" />
+        <stop offset="60%" stop-color="#3a65ae" />
+        <stop offset="80%" stop-color="#58918c" />
+        <stop offset="100%" stop-color="#76bc6b" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== HEADER (partial — « CAFFÈ26 » actif) ===== -->
+  <div class="mc-navwrap">
+    <header class="mc-nav">
+      <a class="mc-nav__brand" href="index.html" aria-label="La Mia Città, accueil">
+        <img class="mc-nav__logo" src="assets/img/logo-header.png" alt="" width="64" height="46" />
+        <span class="mc-nav__name">La Mia Città</span>
+      </a>
+      <nav class="mc-nav__links" aria-label="Navigation principale">
+        <a href="programme.html">Programme</a>
+        <a href="caffe26.html" aria-current="page">CAFFÈ26</a>
+        <a href="carte.html">Carte</a>
+      </nav>
+      <div class="mc-nav__actions">
+        <img class="mc-nav__flag" src="assets/img/flag-fr.svg" alt="Français" width="31" height="24" />
+        <a class="mc-iconbtn" data-account href="onboarding.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <main class="mc-page mc-cf">
+
+      <!-- =================================================================
+           HÉRO — carte bleue pleine largeur « Vivez les Jeux ensemble »
+           ================================================================= -->
+      <section class="mc-cf-hero">
+        <div class="mc-cf-hero__card">
+          <img class="mc-cf-hero__bg" src="assets/img/caffe/hero-card.jpg" alt="" aria-hidden="true" />
+          <div class="mc-cf-hero__inner">
+            <div class="mc-cf-hero__text">
+              <h1 class="mc-cf-hero__title">Vivez les Jeux ensemble, de partout.</h1>
+              <p class="mc-cf-hero__lead">Le coin où les fans du monde entier refont les Jeux. Regardez en direct, réagissez en temps réel, débattez avec des milliers de supporters de 150 nations. Ici, pas besoin de billet pour vivre l'émotion.</p>
+            </div>
+            <div class="mc-cf-stats">
+              <div class="mc-cf-stat" style="--b:#3a65ae">
+                <span class="mc-cf-stat__num mc-grad-text">12 874</span>
+                <span class="mc-cf-stat__lbl">Fans connectés</span>
+              </div>
+              <div class="mc-cf-stat" style="--b:#58918c">
+                <span class="mc-cf-stat__num mc-grad-text">3</span>
+                <span class="mc-cf-stat__lbl">Watchparties<br />live</span>
+              </div>
+              <div class="mc-cf-stat" style="--b:#74437e">
+                <span class="mc-cf-stat__num mc-grad-text">150</span>
+                <span class="mc-cf-stat__lbl">Nations<br />représentées</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <div class="mc-wrap">
+
+      <!-- =================================================================
+           EN CE MOMENT — 3 épreuves en direct
+           ================================================================= -->
+      <section class="mc-cf-section" id="en-ce-moment">
+        <h2 class="mc-h2 mc-grad-text">En ce moment</h2>
+        <div class="mc-cf-now">
+          <article class="mc-cf-nowcard">
+            <a class="mc-cf-nowcard__media" href="#">
+              <img src="assets/img/caffe/curling.jpg" alt="Curling (Hommes Équipes)" />
+              <span class="mc-cf-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </a>
+            <h3 class="mc-cf-nowcard__sport mc-grad-text">Curling</h3>
+            <p class="mc-cf-nowcard__sub">Hommes Équipes</p>
+            <div class="mc-cf-nowcard__btns">
+              <a class="mc-cf-btn mc-cf-btn--outline" href="watchparty.html"><span class="mc-grad-text">Rejoindre la Watchparty</span></a>
+              <a class="mc-cf-btn mc-cf-btn--ghost" href="direct.html">Accéder au direct</a>
+            </div>
+          </article>
+
+          <article class="mc-cf-nowcard">
+            <a class="mc-cf-nowcard__media" href="#">
+              <img src="assets/img/caffe/bobsleigh.jpg" alt="Bobsleigh (Hommes Bob à 4)" />
+              <span class="mc-cf-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </a>
+            <h3 class="mc-cf-nowcard__sport mc-grad-text">Bobsleigh</h3>
+            <p class="mc-cf-nowcard__sub">Hommes Bob à 4</p>
+            <div class="mc-cf-nowcard__btns">
+              <a class="mc-cf-btn mc-cf-btn--outline" href="watchparty.html"><span class="mc-grad-text">Rejoindre la Watchparty</span></a>
+              <a class="mc-cf-btn mc-cf-btn--ghost" href="direct.html">Accéder au direct</a>
+            </div>
+          </article>
+
+          <article class="mc-cf-nowcard">
+            <a class="mc-cf-nowcard__media" href="#">
+              <img src="assets/img/caffe/snowboard.jpg" alt="Snowboard (Descente Hommes)" />
+              <span class="mc-cf-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </a>
+            <h3 class="mc-cf-nowcard__sport mc-grad-text">Snowboard</h3>
+            <p class="mc-cf-nowcard__sub">Descente Hommes</p>
+            <div class="mc-cf-nowcard__btns">
+              <a class="mc-cf-btn mc-cf-btn--outline" href="watchparty.html"><span class="mc-grad-text">Rejoindre la Watchparty</span></a>
+              <a class="mc-cf-btn mc-cf-btn--ghost" href="direct.html">Accéder au direct</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           LA PLACE PUBLIQUE — forum (gauche) + barre latérale (droite)
+           ================================================================= -->
+      <section class="mc-cf-section" id="place-publique">
+        <div class="mc-cf-forum">
+          <!-- Colonne forum -->
+          <div class="mc-cf-forum__main">
+            <h2 class="mc-h2 mc-grad-text">La Place Publique</h2>
+
+            <div class="mc-cf-filters" id="forum-filters" role="tablist" aria-label="Filtrer par discipline">
+              <button class="mc-cf-filter is-active" type="button" data-sport="all"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8L6 3M15.5 8L18 3"/><circle cx="12" cy="14.5" r="5"/><path d="M12 12.3l.8 1.6 1.8.3-1.3 1.3.3 1.8-1.6-.9-1.6.9.3-1.8-1.3-1.3 1.8-.3z" fill="currentColor" stroke="none"/></svg> Tout</button>
+              <button class="mc-cf-filter" type="button" data-sport="ski-alpin"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg> Ski alpin</button>
+              <button class="mc-cf-filter" type="button" data-sport="patinage-artistique"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg> Patinage Artistique</button>
+              <button class="mc-cf-filter" type="button" data-sport="hockey"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l2.5 14"/><path d="M8.5 18h6"/><circle cx="17.5" cy="16.8" r="1.2" fill="currentColor" stroke="none"/></svg> Hockey</button>
+              <button class="mc-cf-filter" type="button" data-sport="snowboard"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5" transform="rotate(38 12 12)"/><circle cx="9" cy="9.5" r="0.85" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r="0.85" fill="currentColor" stroke="none"/></svg> Snowboard</button>
+            </div>
+
+            <p class="mc-cf-forum__lead">Rejoignez des millions de fans du monde entier. Participez à des watchparties virtuelles, partagez vos réactions et revivez les meilleurs moments ensemble.</p>
+
+            <div class="mc-cf-comments">
+              <!-- Commentaire 1 -->
+              <article class="mc-cf-comment" data-sport="ski-alpin">
+                <span class="mc-cf-comment__sport"><span class="mc-grad-text">Ski Alpin</span> <svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg></span>
+                <div class="mc-cf-comment__head">
+                  <span class="mc-avatar"><img src="assets/img/av/sophie.png" alt="" /></span>
+                  <span class="mc-cf-comment__name">Sophie Dubois</span>
+                  <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="France"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect width="1" height="2" x="2" fill="#EF4135"/></svg>
+                  <time>Il y a 12 minutes</time>
+                </div>
+                <p class="mc-cf-comment__msg">Quelle descente incroyable ! Les derniers virages étaient à couper le souffle !</p>
+                <footer class="mc-cf-comment__meta">
+                  <input type="checkbox" id="cf-like-1" class="mc-cf-likecb" hidden />
+                  <label class="mc-cf-like" for="cf-like-1" aria-label="J'aime">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 2.4K
+                  </label>
+                  <span class="mc-cf-comment__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 183</span>
+                  <span class="mc-cf-comment__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                </footer>
+              </article>
+
+              <!-- Commentaire 2 (traduction toggle) -->
+              <article class="mc-cf-comment" data-sport="ski-alpin">
+                <span class="mc-cf-comment__sport"><span class="mc-grad-text">Ski Alpin</span> <svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg></span>
+                <div class="mc-cf-comment__head">
+                  <span class="mc-avatar"><img src="assets/img/av/marco.png" alt="" /></span>
+                  <span class="mc-cf-comment__name">Marco Rossi</span>
+                  <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="Italie"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#CE2B37"/></svg>
+                  <time>Il y a 18 minutes</time>
+                </div>
+                <input type="checkbox" id="cf-tr-marco" class="mc-tr" checked hidden />
+                <p class="mc-cf-comment__msg mc-msg-orig" lang="it">Forza Italia! Oro per la nostra squadra!</p>
+                <p class="mc-cf-comment__msg mc-msg-fr">Forza Italia ! Médaille d'or pour notre équipe !</p>
+                <footer class="mc-cf-comment__meta">
+                  <input type="checkbox" id="cf-like-2" class="mc-cf-likecb" hidden />
+                  <label class="mc-cf-like" for="cf-like-2" aria-label="J'aime">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 5.1K
+                  </label>
+                  <span class="mc-cf-comment__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 421</span>
+                  <span class="mc-cf-comment__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                  <label class="mc-cf-translate" for="cf-tr-marco">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h7M8 4v2c0 3.6-1.8 6.2-4 7.7"/><path d="M5 10c1 1.7 3 3.1 5 3.6"/><path d="M13.5 19l3.2-7 3.2 7M14.9 16.2h3.6"/></svg>
+                    <span class="mc-tr-on">Traduction activée</span><span class="mc-tr-off">Traduire</span>
+                  </label>
+                </footer>
+              </article>
+
+              <!-- Commentaire 3 (traduction toggle) -->
+              <article class="mc-cf-comment" data-sport="patinage-artistique">
+                <span class="mc-cf-comment__sport"><span class="mc-grad-text">Patinage Artistique</span> <svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg></span>
+                <div class="mc-cf-comment__head">
+                  <span class="mc-avatar"><img src="assets/img/av/emma.png" alt="" /></span>
+                  <span class="mc-cf-comment__name">Emma Johnson</span>
+                  <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="Canada"><rect width="3" height="2" fill="#fff"/><rect width="0.75" height="2" fill="#FF0000"/><rect width="0.75" height="2" x="2.25" fill="#FF0000"/><path d="M1.5 0.6l.12.28.3-.05-.18.26.18.26-.3-.05-.12.28-.12-.28-.3.05.18-.26-.18-.26.3.05z" fill="#FF0000"/></svg>
+                  <time>Il y a 25 minutes</time>
+                </div>
+                <input type="checkbox" id="cf-tr-emma" class="mc-tr" hidden />
+                <p class="mc-cf-comment__msg mc-msg-orig" lang="en">Watching from Toronto! The atmosphere here is electric!</p>
+                <p class="mc-cf-comment__msg mc-msg-fr">Je regarde depuis Toronto ! L'ambiance ici est électrique !</p>
+                <footer class="mc-cf-comment__meta">
+                  <input type="checkbox" id="cf-like-3" class="mc-cf-likecb" hidden />
+                  <label class="mc-cf-like" for="cf-like-3" aria-label="J'aime">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 3.7K
+                  </label>
+                  <span class="mc-cf-comment__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 256</span>
+                  <span class="mc-cf-comment__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                  <label class="mc-cf-translate" for="cf-tr-emma">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h7M8 4v2c0 3.6-1.8 6.2-4 7.7"/><path d="M5 10c1 1.7 3 3.1 5 3.6"/><path d="M13.5 19l3.2-7 3.2 7M14.9 16.2h3.6"/></svg>
+                    <span class="mc-tr-on">Traduction activée</span><span class="mc-tr-off">Traduire</span>
+                  </label>
+                </footer>
+              </article>
+
+              <!-- Commentaire 4 (Hockey) -->
+              <article class="mc-cf-comment" data-sport="hockey">
+                <span class="mc-cf-comment__sport"><span class="mc-grad-text">Hockey</span> <svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4l2.5 14"/><path d="M8.5 18h6"/><circle cx="17.5" cy="16.8" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+                <div class="mc-cf-comment__head">
+                  <span class="mc-avatar"><img src="assets/img/av/marco.png" alt="" /></span>
+                  <span class="mc-cf-comment__name">Lukas Berg</span>
+                  <svg class="mc-flagimg" viewBox="0 0 16 10" role="img" aria-label="Suède"><rect width="16" height="10" fill="#006AA7"/><rect x="5" width="2" height="10" fill="#FECC00"/><rect y="4" width="16" height="2" fill="#FECC00"/></svg>
+                  <time>Il y a 30 minutes</time>
+                </div>
+                <p class="mc-cf-comment__msg">Quel match ! Les gardiens sont exceptionnels ce soir, ça envoie du lourd.</p>
+                <footer class="mc-cf-comment__meta">
+                  <input type="checkbox" id="cf-like-4" class="mc-cf-likecb" hidden />
+                  <label class="mc-cf-like" for="cf-like-4" aria-label="J'aime">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 1.8K
+                  </label>
+                  <span class="mc-cf-comment__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 142</span>
+                  <span class="mc-cf-comment__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                </footer>
+              </article>
+
+              <!-- Commentaire 5 (Snowboard) -->
+              <article class="mc-cf-comment" data-sport="snowboard">
+                <span class="mc-cf-comment__sport"><span class="mc-grad-text">Snowboard</span> <svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5" transform="rotate(38 12 12)"/><circle cx="9" cy="9.5" r="0.85" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r="0.85" fill="currentColor" stroke="none"/></svg></span>
+                <div class="mc-cf-comment__head">
+                  <span class="mc-avatar"><img src="assets/img/av/emma.png" alt="" /></span>
+                  <span class="mc-cf-comment__name">Yuki Tanaka</span>
+                  <svg class="mc-flagimg" viewBox="0 0 3 2" role="img" aria-label="Japon"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r="0.5" fill="#BC002D"/></svg>
+                  <time>Il y a 35 minutes</time>
+                </div>
+                <p class="mc-cf-comment__msg">Ce halfpipe est dingue, les rotations sont folles ! Niveau complètement fou cette année.</p>
+                <footer class="mc-cf-comment__meta">
+                  <input type="checkbox" id="cf-like-5" class="mc-cf-likecb" hidden />
+                  <label class="mc-cf-like" for="cf-like-5" aria-label="J'aime">
+                    <svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg> 2.1K
+                  </label>
+                  <span class="mc-cf-comment__stat"><svg class="mc-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4z"/></svg> 198</span>
+                  <span class="mc-cf-comment__reply"><svg class="mc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9V5l-7 7 7 7v-4c5 0 8 1.5 10 5 0-7-3-11-10-11z"/></svg></span>
+                </footer>
+              </article>
+            </div>
+          </div>
+
+          <!-- Barre latérale -->
+          <aside class="mc-cf-side">
+            <!-- Passeport -->
+            <div class="mc-cf-sidecard">
+              <h3 class="mc-cf-sidecard__title">Votre passeport olympique</h3>
+              <p class="mc-cf-sidecard__text">Connectez-vous ou créez un profil afin d'accéder à toutes les personnalisations du Village Digital !</p>
+              <a class="mc-cf-sidebtn" href="compte.html" data-login>Créer mon profil →</a>
+            </div>
+
+            <!-- Tendances -->
+            <div class="mc-cf-sidecard">
+              <h3 class="mc-cf-sidecard__title">Tendances de la Place Publique</h3>
+              <ol class="mc-cf-trends">
+                <li><span class="mc-cf-trends__n">1</span><span class="mc-cf-trends__b"><strong>#descentebormio</strong><small>84 messages · 2,01k vues</small></span></li>
+                <li><span class="mc-cf-trends__n">2</span><span class="mc-cf-trends__b"><strong>#moments-jo26</strong><small>112 messages · 3,6k vues</small></span></li>
+                <li><span class="mc-cf-trends__n">3</span><span class="mc-cf-trends__b"><strong>#patinage-milan</strong><small>31 messages · 890 vues</small></span></li>
+              </ol>
+            </div>
+
+            <!-- Prochaines Watchparty -->
+            <div class="mc-cf-sidecard">
+              <h3 class="mc-cf-sidecard__title">Prochaines Watchparty</h3>
+              <ul class="mc-cf-next">
+                <li>
+                  <span class="mc-cf-next__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg></span>
+                  <span class="mc-cf-next__b"><strong>Patinage Artistique</strong><small>13:00 CET · 12 inscrits</small></span>
+                  <a class="mc-cf-next__add" href="#" aria-label="Rejoindre">+</a>
+                </li>
+                <li>
+                  <span class="mc-cf-next__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg></span>
+                  <span class="mc-cf-next__b"><strong>Ski Alpin</strong><small>15:00 CET · 23 inscrits</small></span>
+                  <a class="mc-cf-next__add" href="#" aria-label="Rejoindre">+</a>
+                </li>
+              </ul>
+              <a class="mc-cf-sidebtn" href="direct.html">↪ Rejoindre une party</a>
+            </div>
+
+            <!-- Sécurité -->
+            <div class="mc-cf-sidecard">
+              <h3 class="mc-cf-sidecard__title">Sécurité</h3>
+              <p class="mc-cf-sidecard__text">Vous avez vu quelque chose de problématique dans le forum ou une watchparty ?</p>
+              <a class="mc-cf-sidebtn" href="#">⚑ Signaler un abus</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           WATCHPARTY & REDIFFUSIONS
+           ================================================================= -->
+      <section class="mc-cf-section" id="watchparty">
+        <h2 class="mc-h2 mc-grad-text">Watchparty &amp; Rediffusions</h2>
+
+        <div class="mc-cf-filters" role="tablist" aria-label="Type de contenu">
+          <button class="mc-cf-filter is-active" type="button">Watchparty</button>
+          <button class="mc-cf-filter mc-cf-filter--text" type="button">Rediffusions</button>
+        </div>
+
+        <div class="mc-cf-wp">
+          <article class="mc-cf-wpcard">
+            <div class="mc-cf-wpcard__media">
+              <img src="assets/img/caffe/snowboard.jpg" alt="Snowboard (Descente Hommes)" />
+              <span class="mc-cf-live">● LIVE</span>
+            </div>
+            <div class="mc-cf-wpcard__body">
+              <p class="mc-cf-wpcard__sport mc-grad-text">Snowboard</p>
+              <p class="mc-cf-wpcard__title">Descente Hommes</p>
+              <hr class="mc-cf-wpcard__sep" />
+              <div class="mc-cf-wpcard__btns">
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--outline" href="direct.html"><span class="mc-grad-text">Accéder au direct</span></a>
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--fill" href="watchparty.html">Rejoindre la Watchparty</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mc-cf-wpcard">
+            <div class="mc-cf-wpcard__media">
+              <img src="assets/img/caffe/curling.jpg" alt="Curling (Hommes Équipes)" />
+              <span class="mc-cf-live">● LIVE</span>
+            </div>
+            <div class="mc-cf-wpcard__body">
+              <p class="mc-cf-wpcard__sport mc-grad-text">Curling</p>
+              <p class="mc-cf-wpcard__title">Hommes Équipes</p>
+              <hr class="mc-cf-wpcard__sep" />
+              <div class="mc-cf-wpcard__btns">
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--outline" href="direct.html"><span class="mc-grad-text">Accéder au direct</span></a>
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--fill" href="watchparty.html">Rejoindre la Watchparty</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mc-cf-wpcard">
+            <div class="mc-cf-wpcard__media">
+              <img src="assets/img/caffe/bobsleigh.jpg" alt="Bobsleigh (Hommes Bob à 4)" />
+              <span class="mc-cf-live">● LIVE</span>
+            </div>
+            <div class="mc-cf-wpcard__body">
+              <p class="mc-cf-wpcard__sport mc-grad-text">Bobsleigh</p>
+              <p class="mc-cf-wpcard__title">Hommes Bob à 4</p>
+              <hr class="mc-cf-wpcard__sep" />
+              <div class="mc-cf-wpcard__btns">
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--outline" href="direct.html"><span class="mc-grad-text">Accéder au direct</span></a>
+                <a class="mc-cf-wpbtn mc-cf-wpbtn--fill" href="watchparty.html">Rejoindre la Watchparty</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte « créer » en dégradé -->
+          <article class="mc-cf-create">
+            <div class="mc-cf-create__head">
+              <div>
+                <h3 class="mc-cf-create__title">Créer une Watchparty</h3>
+                <p class="mc-cf-create__sub">Invitez vos amis et regardez ensemble</p>
+              </div>
+              <a class="mc-cf-create__plus" href="watchparty-privee.html" aria-label="Créer une watchparty"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></a>
+            </div>
+            <hr class="mc-cf-create__sep" />
+            <ul class="mc-cf-create__list">
+              <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="#fff"/></svg>
+                Choisissez une épreuve ou une rediffusion
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M18 20a6 6 0 0 0-4-5.6"/></svg>
+                Invitez jusqu'à 50 amis par lien ou pseudo
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/></svg>
+                Chattez et réagissez ensemble en temps réel
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (partial) ===== -->
+  <footer class="mc-footer">
+    <div class="mc-wrap mc-footer__inner">
+      <div class="mc-footer__top">
+        <div class="mc-footer__brand">
+          <p class="mc-footer__tagline">L'application compagnon officielle des Jeux Olympiques d'hiver Milano Cortina 2026.</p>
+          <img class="mc-footer__logo" src="assets/img/logo-footer.png" alt="Mia Città" />
+        </div>
+        <div class="mc-footer__cols">
+          <nav class="mc-footer__col" aria-label="Fonctionnalités">
+            <h4>Fonctionnalités</h4>
+            <a href="programme.html">Programme</a><a href="caffe26.html">CAFFÈ26</a><a href="carte.html">Carte Interactive</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="À propos">
+            <h4>À propos</h4>
+            <a href="#">Milano Cortina 2026</a><a href="#">Partenaires</a><a href="credits.html">Crédits</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="Support">
+            <h4>Support</h4>
+            <a href="#">FAQ</a><a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <hr class="mc-footer__line" />
+      <div class="mc-footer__legal">
+        <p>Mentions Légales<br />Accessibilité</p>
+        <p>Politique des cookies<br />Paramètres de cookies</p>
+        <p>Politique de Confidentialité<br />Conditions d'Utilisations</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Filtres du forum (La Place Publique) : affichent les commentaires du sport choisi.
+    (function () {
+      var grp = document.getElementById('forum-filters');
+      if (grp) {
+        var btns = [].slice.call(grp.querySelectorAll('.mc-cf-filter[data-sport]'));
+        var comments = [].slice.call(document.querySelectorAll('.mc-cf-comment'));
+        btns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            btns.forEach(function (b) { b.classList.remove('is-active'); });
+            btn.classList.add('is-active');
+            var s = btn.getAttribute('data-sport');
+            comments.forEach(function (c) {
+              c.hidden = !(s === 'all' || c.getAttribute('data-sport') === s);
+            });
+          });
+        });
+      }
+      // Onglets Watchparty / Rediffusions : bascule l'état actif.
+      [].forEach.call(document.querySelectorAll('.mc-cf-filters[aria-label="Type de contenu"]'), function (group) {
+        var tabs = [].slice.call(group.querySelectorAll('.mc-cf-filter'));
+        tabs.forEach(function (t) {
+          t.addEventListener('click', function () {
+            tabs.forEach(function (x) { x.classList.remove('is-active'); });
+            t.classList.add('is-active');
+          });
+        });
+      });
+    })();
+  </script>
+  <script src="assets/comments.js?v=12" defer></script>
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/auth.js?v=12" defer></script>
+</body>
+</html>

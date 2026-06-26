@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon espace · La Mia Città</title>
+  <meta name="description" content="Ton espace olympique personnel : épreuves favorites, badges, collectibles et watchparties d'un seul coup d'œil." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+</head>
+<body>
+
+  <!-- Dégradé de marque réutilisable pour les tracés d'icônes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="mcGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c0163e" /><stop offset="22%" stop-color="#9c2b5c" />
+        <stop offset="40%" stop-color="#74437e" /><stop offset="60%" stop-color="#3a65ae" />
+        <stop offset="80%" stop-color="#58918c" /><stop offset="100%" stop-color="#76bc6b" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <div class="mc-navwrap">
+    <header class="mc-nav">
+      <a class="mc-nav__brand" href="index.html" aria-label="La Mia Città, accueil">
+        <img class="mc-nav__logo" src="assets/img/logo-header.png" alt="" width="64" height="46" />
+        <span class="mc-nav__name">La Mia Città</span>
+      </a>
+      <nav class="mc-nav__links" aria-label="Navigation principale">
+        <a href="programme.html">Programme</a>
+        <a href="caffe26.html">CAFFÈ26</a>
+        <a href="carte.html">Carte</a>
+      </nav>
+      <div class="mc-nav__actions">
+        <img class="mc-nav__flag" src="assets/img/flag-fr.svg" alt="Français" width="31" height="24" />
+        <a class="mc-iconbtn" data-account href="compte.html" aria-label="Mon compte" aria-current="page">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <main class="mc-page mc-ac">
+
+    <!-- ===== HÉRO pleine largeur ===== -->
+    <section class="mc-cf-hero mc-cf-hero--solo">
+      <div class="mc-cf-hero__card">
+        <img class="mc-cf-hero__bg" src="assets/img/caffe/sidebar-bg.png" alt="" aria-hidden="true" />
+        <div class="mc-cf-hero__inner">
+          <div class="mc-cf-hero__text">
+            <h1 class="mc-cf-hero__title">Bienvenue aux Jeux Olympiques&nbsp;!</h1>
+            <p class="mc-cf-hero__lead">Ton espace olympique personnel. Retrouve tes épreuves favorites, tes badges, tes collectibles et tes watchparties d'un seul coup d'œil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mc-wrap">
+      <div class="mc-ac-grid">
+
+        <!-- ============ COLONNE GAUCHE ============ -->
+        <aside class="mc-ac-side">
+          <!-- Profil -->
+          <div class="mc-ac-card">
+            <div class="mc-ac-profile">
+              <span class="mc-ac-avatar">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+              </span>
+              <p class="mc-ac-profile__id"><strong data-profile-name>Nom prénom</strong><span data-profile-email>nomprenom@gmail.com</span></p>
+            </div>
+            <div class="mc-ac-passport">ID Passport :<br />MC0000-0000-0000</div>
+            <div class="mc-ac-prog">
+              <h3 class="mc-ac-card__title">Progression</h3>
+              <div class="mc-ac-bar"><span style="width:86%"></span></div>
+              <div class="mc-ac-prog__row"><span>Niveau 4 (Aventurier)</span><span class="mc-ac-prog__pts">860/1000 pts</span></div>
+            </div>
+          </div>
+
+          <!-- Statistiques -->
+          <div class="mc-ac-card">
+            <h3 class="mc-ac-card__title">Statistiques</h3>
+            <ul class="mc-ac-stats">
+              <li>
+                <svg class="mc-ac-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <span>Watchtime</span><b>12 heures</b>
+              </li>
+              <li>
+                <svg class="mc-ac-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v4a6 6 0 0 1-12 0z"/><path d="M6 6H4a2 2 0 0 0 2 3M18 6h2a2 2 0 0 1-2 3M9 18h6M10 18l.5-3.2M14 18l-.5-3.2"/></svg>
+                <span>Épreuves</span><b>4</b>
+              </li>
+              <li>
+                <svg class="mc-ac-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.5M18 20a6 6 0 0 0-4-5.6"/></svg>
+                <span>Watchparty</span><b>5</b>
+              </li>
+              <li>
+                <svg class="mc-ac-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>
+                <span>Collectibles</span><b>4/12</b>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Favoris -->
+          <div class="mc-ac-card">
+            <h3 class="mc-ac-card__title">Favoris</h3>
+            <ul class="mc-ac-fav">
+              <li><span class="mc-ac-fav__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg></span><span class="mc-ac-fav__name">Ski Alpin</span>
+                <input type="checkbox" id="fav-ski" class="mc-fav-cb" checked hidden />
+                <label class="mc-fav-toggle" for="fav-ski" aria-label="Favori"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg></label>
+              </li>
+              <li><span class="mc-ac-fav__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg></span><span class="mc-ac-fav__name">Patinage Artistique</span>
+                <input type="checkbox" id="fav-pat" class="mc-fav-cb" hidden />
+                <label class="mc-fav-toggle" for="fav-pat" aria-label="Favori"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg></label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Notifications -->
+          <div class="mc-ac-card">
+            <h3 class="mc-ac-card__title">Notifications</h3>
+            <ul class="mc-ac-notif">
+              <li><span class="mc-ac-fav__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg></span><span class="mc-ac-fav__name">Ski Alpin</span>
+                <input type="checkbox" id="nt-ski" class="mc-ac-togglecb" checked hidden />
+                <label class="mc-ac-toggle" for="nt-ski" aria-label="Notifications Ski Alpin"></label>
+              </li>
+              <li><span class="mc-ac-fav__ic"><svg class="mc-spic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg></span><span class="mc-ac-fav__name">Patinage Artistique</span>
+                <input type="checkbox" id="nt-pat" class="mc-ac-togglecb" checked hidden />
+                <label class="mc-ac-toggle" for="nt-pat" aria-label="Notifications Patinage Artistique"></label>
+              </li>
+            </ul>
+            <a class="mc-ac-link" href="#">Paramètres de notifications →</a>
+          </div>
+
+          <!-- Sécurité & RSE -->
+          <div class="mc-ac-card">
+            <h3 class="mc-ac-card__title">Sécurité &amp; RSE</h3>
+            <a class="mc-cf-sidebtn" href="#">⚑ Signaler un abus</a>
+            <a class="mc-cf-sidebtn" href="#">? Accessibilité</a>
+            <a class="mc-cf-sidebtn" href="#">? Centre d'aide</a>
+          </div>
+
+          <!-- Utilisateurs bloqués -->
+          <div class="mc-ac-card">
+            <h3 class="mc-ac-card__title">Utilisateurs bloqués</h3>
+            <ul class="mc-ac-blocked" data-blocked-list></ul>
+            <p class="mc-ac-blocked__empty" data-blocked-empty>Aucun utilisateur bloqué.</p>
+          </div>
+
+          <a class="mc-cf-sidebtn mc-ac-logout" href="onboarding.html" data-logout>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+            Se déconnecter
+          </a>
+        </aside>
+
+        <!-- ============ COLONNE DROITE ============ -->
+        <div class="mc-ac-main">
+
+          <!-- Points obtenus -->
+          <section class="mc-ac-panel" id="points">
+            <div class="mc-ac-panel__head">
+              <h2 class="mc-ac-panel__title">Points obtenus</h2>
+              <a class="mc-ac-link" href="#pts-help">Comment obtenir des points ?</a>
+            </div>
+            <ul class="mc-ac-points">
+              <li><span>Tu as exploré Anterselva sur la carte</span><b>+10 pts</b></li>
+              <li><span>Tu as rejoint la watchparty Descente Hommes</span><b>+15 pts</b></li>
+              <li><span>Badge débloqué · Citoyen du Monde</span><b>+50 pts</b></li>
+              <li><span>Programme libre dames ajouté en favori</span><b>+5 pts</b></li>
+            </ul>
+          </section>
+
+          <!-- Badges obtenus -->
+          <section class="mc-ac-panel" id="badges">
+            <div class="mc-ac-panel__head">
+              <h2 class="mc-ac-panel__title">Badges obtenus</h2>
+              <a class="mc-ac-link" href="#">Voir tous les badges →</a>
+            </div>
+            <div class="mc-ac-tiles">
+              <a class="mc-ac-tile" href="#bd-citoyen" style="background:#3a65ae">
+                <svg class="mc-ac-tile__ic" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+                <span class="mc-ac-tile__name">Citoyen du Monde</span><span class="mc-ac-tile__pts">+50 pts</span>
+              </a>
+              <a class="mc-ac-tile" href="#bd-ambassadeur" style="background:linear-gradient(257deg,#c0163e,#9c2b5c)">
+                <svg class="mc-ac-tile__ic" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>
+                <span class="mc-ac-tile__name">Ambassadeur</span><span class="mc-ac-tile__pts">+30 pts</span>
+              </a>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            </div>
+          </section>
+
+          <!-- Collectibles du Village -->
+          <section class="mc-ac-panel" id="collectibles">
+            <div class="mc-ac-panel__head">
+              <h2 class="mc-ac-panel__title">Collectibles du Village</h2>
+              <a class="mc-ac-link" href="carte.html">Explorer la carte →</a>
+            </div>
+            <p class="mc-ac-subtitle">Progression de la collection</p>
+            <div class="mc-ac-bar mc-ac-bar--wide"><span style="width:42%"></span></div>
+            <p class="mc-ac-count">5/12 Collectibles</p>
+            <div class="mc-ac-tiles">
+              <a class="mc-ac-tile" href="#cl-dolomites" style="background:linear-gradient(257deg,#74437e,#3a65ae)">
+                <svg class="mc-ac-tile__ic" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l6-11 4 7 2-3 6 7z"/></svg>
+                <span class="mc-ac-tile__name">Les Dolomites</span><span class="mc-ac-tile__pts">+30 pts</span>
+              </a>
+              <a class="mc-ac-tile" href="#cl-milan" style="background:linear-gradient(257deg,#58918c,#76bc6b)">
+                <svg class="mc-ac-tile__ic" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4M6 4h11l-2 3 2 3H6"/></svg>
+                <span class="mc-ac-tile__name">La Capitale du Nord</span><span class="mc-ac-tile__pts">+30 pts</span>
+              </a>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+              <div class="mc-ac-tile mc-ac-tile--lock"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- =================================================================
+         MODALS BADGES & COLLECTIBLES (CSS :target, sans JS)
+         Composant .mc-modal réutilisé ; accent via --ac / --ac2.
+         ================================================================= -->
+    <!-- Comment obtenir des points -->
+    <div class="mc-modal" id="pts-help" role="dialog" aria-modal="true" aria-label="Comment obtenir des points" style="--ac:#3a65ae; --ac2:#74437e">
+      <a class="mc-modal__scrim" href="#points" aria-label="Fermer"></a>
+      <div class="mc-modal__card">
+        <div class="mc-modal__head"><span>Comment obtenir des points ?</span><a class="mc-modal__close" href="#points" aria-label="Fermer">✕</a></div>
+        <div class="mc-modal__body">
+          <p class="mc-modal__text" style="text-align:center">Gagne des points en vivant les Jeux et grimpe les niveaux du Village Digital.</p>
+          <ul class="mc-pts-list">
+            <li><span>Explorer un lieu sur la carte interactive</span><b>+10 pts</b></li>
+            <li><span>Rejoindre une watchparty en direct</span><b>+15 pts</b></li>
+            <li><span>Collecter un souvenir du Village</span><b>+30 pts</b></li>
+            <li><span>Débloquer un badge</span><b>+50 pts</b></li>
+            <li><span>Ajouter une épreuve en favori</span><b>+5 pts</b></li>
+            <li><span>Réagir sur la Place Publique</span><b>+5 pts</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badge : Citoyen du Monde -->
+    <div class="mc-modal" id="bd-citoyen" role="dialog" aria-modal="true" aria-label="Badge Citoyen du Monde" style="--ac:#3a65ae; --ac2:#3a65ae">
+      <a class="mc-modal__scrim" href="#badges" aria-label="Fermer"></a>
+      <div class="mc-modal__card">
+        <div class="mc-modal__head"><span>Citoyen du Monde · Badge</span><a class="mc-modal__close" href="#badges" aria-label="Fermer">✕</a></div>
+        <div class="mc-modal__body">
+          <div class="mc-modal__hero mc-modal__hero--icon">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="#fff" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+          </div>
+          <span class="mc-modal__chip">✦ Badge débloqué</span>
+          <h3 class="mc-modal__title">Citoyen du Monde</h3>
+          <hr class="mc-modal__line" />
+          <p class="mc-modal__label">L'anecdote</p>
+          <p class="mc-modal__text">Le badge des explorateurs sans frontières. Tu suis les Jeux aux côtés de fans des quatre coins du monde, sans jamais quitter ton salon.</p>
+          <p class="mc-modal__label">Pourquoi ce badge ?</p>
+          <p class="mc-modal__text mc-modal__text--mute">Tu as rejoint une watchparty internationale et échangé avec la communauté mondiale du Village Digital.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badge : Ambassadeur -->
+    <div class="mc-modal" id="bd-ambassadeur" role="dialog" aria-modal="true" aria-label="Badge Ambassadeur" style="--ac:#c0163e; --ac2:#9c2b5c">
+      <a class="mc-modal__scrim" href="#badges" aria-label="Fermer"></a>
+      <div class="mc-modal__card">
+        <div class="mc-modal__head"><span>Ambassadeur · Badge</span><a class="mc-modal__close" href="#badges" aria-label="Fermer">✕</a></div>
+        <div class="mc-modal__body">
+          <div class="mc-modal__hero mc-modal__hero--icon">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>
+          </div>
+          <span class="mc-modal__chip">✦ Badge débloqué</span>
+          <h3 class="mc-modal__title">Ambassadeur</h3>
+          <hr class="mc-modal__line" />
+          <p class="mc-modal__label">L'anecdote</p>
+          <p class="mc-modal__text">Réservé à celles et ceux qui font vivre la communauté : partage, entraide et bonne humeur olympique au quotidien.</p>
+          <p class="mc-modal__label">Pourquoi ce badge ?</p>
+          <p class="mc-modal__text mc-modal__text--mute">Tu as publié et soutenu plusieurs messages sur la Place Publique du CAFFÈ26.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collectible : Les Dolomites -->
+    <div class="mc-modal" id="cl-dolomites" role="dialog" aria-modal="true" aria-label="Collectible Les Dolomites" style="--ac:#74437e; --ac2:#3a65ae">
+      <a class="mc-modal__scrim" href="#collectibles" aria-label="Fermer"></a>
+      <div class="mc-modal__card">
+        <div class="mc-modal__head"><span>Les Dolomites · Patrimoine</span><a class="mc-modal__close" href="#collectibles" aria-label="Fermer">✕</a></div>
+        <div class="mc-modal__body">
+          <div class="mc-modal__hero"><img src="assets/img/ov/cortina.jpg" alt="Les Dolomites" loading="lazy" /></div>
+          <span class="mc-modal__chip">✦ Collectible débloqué</span>
+          <h3 class="mc-modal__title">Les Dolomites</h3>
+          <hr class="mc-modal__line" />
+          <p class="mc-modal__label">L'anecdote</p>
+          <p class="mc-modal__text">Inscrites au patrimoine mondial de l'UNESCO, ces cathédrales de roche pâle veillent sur les épreuves de montagne des Jeux.</p>
+          <p class="mc-modal__label">Pourquoi ce badge ?</p>
+          <p class="mc-modal__text mc-modal__text--mute">Tu as exploré le point naturel des Dolomites sur la carte interactive et collecté ce souvenir.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collectible : Milan / La Capitale du Nord -->
+    <div class="mc-modal" id="cl-milan" role="dialog" aria-modal="true" aria-label="Collectible Milan" style="--ac:#58918c; --ac2:#76bc6b">
+      <a class="mc-modal__scrim" href="#collectibles" aria-label="Fermer"></a>
+      <div class="mc-modal__card">
+        <div class="mc-modal__head"><span>Milan · La Capitale du Nord</span><a class="mc-modal__close" href="#collectibles" aria-label="Fermer">✕</a></div>
+        <div class="mc-modal__body">
+          <div class="mc-modal__hero"><img src="assets/img/imm/milano.jpg" alt="Milan (Piazza del Duomo)" loading="lazy" style="object-position:center 38%" /></div>
+          <span class="mc-modal__chip">✦ Collectible débloqué</span>
+          <h3 class="mc-modal__title">Milan</h3>
+          <hr class="mc-modal__line" />
+          <p class="mc-modal__label">L'anecdote</p>
+          <p class="mc-modal__text">La ville qui ne dort jamais accueille hockey, patinage et la cérémonie de clôture. Premier collectible du Village, et le plus convoité.</p>
+          <p class="mc-modal__label">Pourquoi ce badge ?</p>
+          <p class="mc-modal__text mc-modal__text--mute">Tu as exploré le point culturel Milan sur la carte interactive et collecté ce souvenir.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mc-footer">
+    <div class="mc-wrap mc-footer__inner">
+      <div class="mc-footer__top">
+        <div class="mc-footer__brand">
+          <p class="mc-footer__tagline">L'application compagnon officielle des Jeux Olympiques d'hiver Milano Cortina 2026.</p>
+          <img class="mc-footer__logo" src="assets/img/logo-footer.png" alt="Mia Città" />
+        </div>
+        <div class="mc-footer__cols">
+          <nav class="mc-footer__col" aria-label="Fonctionnalités">
+            <h4>Fonctionnalités</h4>
+            <a href="programme.html">Programme</a><a href="caffe26.html">CAFFÈ26</a><a href="carte.html">Carte Interactive</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="À propos">
+            <h4>À propos</h4>
+            <a href="#">Milano Cortina 2026</a><a href="#">Partenaires</a><a href="credits.html">Crédits</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="Support">
+            <h4>Support</h4>
+            <a href="#">FAQ</a><a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <hr class="mc-footer__line" />
+      <div class="mc-footer__legal">
+        <p>Mentions Légales<br />Accessibilité</p>
+        <p>Politique des cookies<br />Paramètres de cookies</p>
+        <p>Politique de Confidentialité<br />Conditions d'Utilisations</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/auth.js?v=12" defer></script>
+</body>
+</html>

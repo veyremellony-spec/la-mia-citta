@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carte Interactive · La Mia Città</title>
+  <meta name="description" content="Explorez les villes hôtes de Milano Cortina 2026 sur la carte interactive et basculez en vue street view immersive." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+</head>
+<body class="mc-body--app">
+
+  <!-- ===== HEADER (copie du partial — « Carte » actif) ===== -->
+  <div class="mc-navwrap">
+    <header class="mc-nav">
+      <a class="mc-nav__brand" href="index.html" aria-label="La Mia Città, accueil">
+        <img class="mc-nav__logo" src="assets/img/logo-header.png" alt="" width="64" height="46" />
+        <span class="mc-nav__name">La Mia Città</span>
+      </a>
+      <nav class="mc-nav__links" aria-label="Navigation principale">
+        <a href="programme.html">Programme</a>
+        <a href="caffe26.html">CAFFÈ26</a>
+        <a href="carte.html" aria-current="page">Carte</a>
+      </nav>
+      <div class="mc-nav__actions">
+        <img class="mc-nav__flag" src="assets/img/flag-fr.svg" alt="Français" width="31" height="24" />
+        <a class="mc-iconbtn" data-account href="onboarding.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <!-- ===== VUE CARTE — plein écran + 8 pins (→ overlays infos) ===== -->
+  <main class="mc-carte" id="vue-carte">
+    <div class="mc-carte__map">
+      <img class="mc-carte__img" src="assets/img/carte-full.png" alt="Carte des villes hôtes de Milano Cortina 2026" />
+
+      <!-- 8 pins (badge navy + picto blanc) → ouvrent la carte-info de la ville -->
+      <a class="mc-mappin" style="left:74.9%; top:21.7%" href="#ov-anterselva" aria-label="Anterselva"><span class="mc-mappin__dot">⛸️</span></a>
+      <a class="mc-mappin" style="left:73.8%; top:33.9%" href="#ov-cortina" aria-label="Cortina"><span class="mc-mappin__dot">❄️</span></a>
+      <a class="mc-mappin" style="left:41.4%; top:31.0%" href="#ov-livigno" aria-label="Livigno"><span class="mc-mappin__dot">🏂</span></a>
+      <a class="mc-mappin" style="left:45.5%; top:40.0%" href="#ov-bormio" aria-label="Bormio / Valdisotto"><span class="mc-mappin__dot">⛷️</span></a>
+      <a class="mc-mappin" style="left:57.0%; top:46.4%" href="#ov-tesero" aria-label="Tesero"><span class="mc-mappin__dot">🎿</span></a>
+      <a class="mc-mappin" style="left:65.0%; top:47.8%" href="#ov-predazzo" aria-label="Predazzo"><span class="mc-mappin__dot">⛷️</span></a>
+      <a class="mc-mappin" style="left:24.8%; top:70.0%" href="#ov-milano" aria-label="Milan"><span class="mc-mappin__dot">👑</span></a>
+      <a class="mc-mappin" style="left:56.1%; top:69.2%" href="#ov-verona" aria-label="Verona"><span class="mc-mappin__dot">🕯️</span></a>
+    </div>
+
+    <!-- Contrôles (hors de l'élément zoomé → taille constante) -->
+    <div class="mc-carte__zoom" role="group" aria-label="Zoom de la carte">
+      <button class="mc-carte__zoombtn" type="button" data-zoom="in" aria-label="Zoomer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button class="mc-carte__zoombtn" type="button" data-zoom="out" aria-label="Dézoomer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+      <button class="mc-carte__zoombtn" type="button" data-zoom="reset" aria-label="Réinitialiser le zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v4h4"/></svg></button>
+    </div>
+
+    <!-- Contrôle : bascule vers la vue 360° (photo immersive de Milan) -->
+    <a class="mc-mapctrl" href="#street" aria-label="Passer en vue 360°">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M9 9l4-2 3 3 3 1M13 7l-2 5 3 3 1 4M11 12l-4 1-2 4"/></svg>
+      <span>Vue 360°</span>
+    </a>
+  </main>
+
+  <!-- =====================================================================
+       OVERLAYS VILLES (cartes infos) — composant .mc-ov réutilisé ×8
+       Identique à l'accueil ; fermeture → retour à la carte (#vue-carte)
+       ===================================================================== -->
+  <div class="mc-ov" id="ov-milano" role="dialog" aria-modal="true" aria-label="Milano">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#3a65ae">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Hockey sur glace</span>
+      <h3 class="mc-ov__city mc-grad-text">Milano</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Anecdote</p>
+      <p class="mc-ov__text">Les Milanais ont une obsession quasi-religieuse pour le spritz, mais ils le font avec du Campari (pas de l'Aperol, c'est une affaire sérieuse). Des bars du centre ont littéralement perdu des clients en leur servant la mauvaise version. Pour eux, c'est à peu près aussi grave qu'une faute de goût en fashion week.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/milano.jpg" alt="Milano" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-cortina" role="dialog" aria-modal="true" aria-label="Cortina d'Ampezzo">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#76bc6b">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Descente alpine</span>
+      <h3 class="mc-ov__city mc-grad-text">Cortina d'Ampezzo</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">Cortina d'Ampezzo se prend tellement au sérieux en tant que « reine des Dolomites » que la ville a officiellement refusé plusieurs fois d'être associée à des projets jugés « pas assez chics ». Il y a quelques années, une enseigne de fast-food a tenté de s'installer en centre-ville et s'est fait poliment mais fermement éconduire. À Cortina, même les chiens de traîneau portent probablement du Canada Goose.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/cortina.jpg" alt="Cortina d'Ampezzo" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-verona" role="dialog" aria-modal="true" aria-label="Verona">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#74437e">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Cérémonies</span>
+      <h3 class="mc-ov__city mc-grad-text">Verona</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">L'Arena di Verona, amphithéâtre romain construit en l'an 30 apr. J.-C., accueillera les cérémonies de remise des médailles des JO 2026. L'une des arènes antiques les mieux conservées au monde, elle peut accueillir jusqu'à 22 000 spectateurs sous les étoiles.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/verona.jpg" alt="Arena di Verona" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-bormio" role="dialog" aria-modal="true" aria-label="Bormio">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#c0163e">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Ski Alpin</span>
+      <h3 class="mc-ov__city mc-grad-text">Bormio</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">La Stelvio est l'une des pistes les plus redoutées du circuit : 3,3 km de descente, 1 000 m de dénivelé et des passages à 65 % de pente. Elle accueille la Coupe du Monde depuis 1985 et voit les athlètes dépasser les 130 km/h.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/bormio.jpg" alt="Bormio" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-tesero" role="dialog" aria-modal="true" aria-label="Tesero">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#58918c">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Cross-Country Ski</span>
+      <h3 class="mc-ov__city mc-grad-text">Tesero</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">Tesero est un village de 3 000 habitants dans la vallée de Fiemme, et il a produit un nombre absurde de champions olympiques de ski de fond. Le ratio médailles/habitants y est tellement délirant que les habitants ont fini par appeler leur vallée « la vallée des champions » complètement sérieusement, sans ironie.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/tesero.jpg" alt="Tesero" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-predazzo" role="dialog" aria-modal="true" aria-label="Predazzo">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#9c2b5c">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Saut de ski</span>
+      <h3 class="mc-ov__city mc-grad-text">Predazzo</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">Predazzo abrite le musée géologique des Dolomites, parce que c'est ici qu'au XIXe siècle des géologues ont compris que les Dolomites étaient d'anciens récifs coralliens. Ce qui voulait dire que ces montagnes spectaculaires étaient autrefois au fond d'une mer tropicale. Personne n'a voulu les croire au départ.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/predazzo.jpg" alt="Predazzo" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-anterselva" role="dialog" aria-modal="true" aria-label="Anterselva">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#3a65ae">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Biathlon</span>
+      <h3 class="mc-ov__city mc-grad-text">Anterselva</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Anecdote</p>
+      <p class="mc-ov__text">Anterselva possède un lac glaciaire à 1 642 mètres d'altitude qui gèle si régulièrement et si parfaitement en hiver que les habitants s'en servaient comme route officielle pour traverser la vallée. Une route sur un lac, utilisée pendant des siècles, complètement normale pour eux.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/anterselva.jpg" alt="Anterselva" />
+    </div>
+  </div>
+
+  <div class="mc-ov" id="ov-livigno" role="dialog" aria-modal="true" aria-label="Livigno">
+    <a class="mc-ov__scrim" href="#vue-carte" aria-label="Fermer"></a>
+    <div class="mc-ov__card" style="--ov:#76bc6b">
+      <a class="mc-ov__close" href="#vue-carte" aria-label="Fermer">&times;</a>
+      <span class="mc-ov__chip">Snowboard</span>
+      <h3 class="mc-ov__city mc-grad-text">Livigno</h3>
+      <hr class="mc-ov__line" />
+      <p class="mc-ov__label">Le saviez-vous ?</p>
+      <p class="mc-ov__text">En hiver, Livigno est régulièrement coupée du reste de l'Italie par les chutes de neige, et pendant des siècles les habitants ont développé un dialecte local si particulier que les villages voisins avaient du mal à les comprendre. L'isolement forcé a littéralement fabriqué une langue à part entière dans une vallée de montagne.</p>
+      <img class="mc-ov__photo" loading="lazy" src="assets/img/ov/livigno.jpg" alt="Livigno" />
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       STREET VIEW (plein écran) — déclenché par le bouton bas-droite.
+       Le point d'intérêt ambré ouvre la fiche « collectible » (toggle CSS).
+       ===================================================================== -->
+  <section class="mc-street" id="street" aria-label="Vue street view, Milan">
+    <!-- Toggle CSS de la fiche collectible (avant le viewport pour le sélecteur ~) -->
+    <input type="checkbox" id="sv-collect" class="mc-street__toggle" hidden />
+
+    <!-- Conteneur défilable : la photo est zoomée et débordante → on la déplace
+         au scroll/trackpad/tactile. direction:rtl = départ calé à droite, donc le
+         pin (placé en haut à GAUCHE) est hors-champ et se découvre en allant à gauche. -->
+    <div class="mc-street__viewport">
+      <div class="mc-street__stage">
+        <img class="mc-street__photo" loading="lazy" src="assets/img/imm/milano.jpg" alt="Place du Duomo, Milan" />
+        <label class="mc-street__poi" for="sv-collect" aria-label="Découvrir le point d'intérêt">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2M15 10V8M11 6H9M21 6h-2M18.5 3.5L17 5M18.5 8.5L17 7M4 20l9-9M13.5 7.5l3 3"/></svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="mc-street__cardwrap">
+      <label class="mc-street__cardscrim" for="sv-collect" aria-label="Fermer la fiche"></label>
+      <div class="mc-street__card" role="dialog" aria-label="Le Cavalier de Bronze">
+        <div class="mc-street__cardhead">
+          <span>Milan · La Capitale du Nord</span>
+          <label class="mc-street__cardclose" for="sv-collect" aria-label="Fermer">&times;</label>
+        </div>
+        <div class="mc-street__cardbody">
+          <img class="mc-street__cardimg" loading="lazy" src="assets/img/imm/milano.jpg" alt="" />
+          <span class="mc-street__chip">✦ Collectible débloqué</span>
+          <h3 class="mc-street__cardtitle">Le Cavalier de Bronze</h3>
+          <p class="mc-street__cardtext">Au centre de la plus célèbre place de Milan, le premier roi de l'Italie unifiée veille sur le Duomo depuis son cheval de bronze. Sculpté par Ercole Rosa et inauguré en 1896, le monument fige Victor-Emmanuel II en plein élan, le regard tourné vers la cathédrale.</p>
+        </div>
+      </div>
+    </div>
+
+    <span class="mc-street__city">Milan</span>
+    <!-- Retour à la carte (l'icône de base est masquée en street view, remplacée par l'icône carte) -->
+    <a class="mc-street__back" href="#vue-carte" aria-label="Revenir à la carte">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5 2V6l5-2 6 2 5-2v16l-5 2-6-2z"/><path d="M9 4v16M15 6v16"/></svg>
+    </a>
+  </section>
+
+  <script src="assets/map.js?v=12" defer></script>
+  <script src="assets/confetti.js?v=12" defer></script>
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/auth.js?v=12" defer></script>
+</body>
+</html>

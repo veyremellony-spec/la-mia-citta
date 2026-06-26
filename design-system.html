@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design System · La Mia Città</title>
+  <meta name="description" content="Le système de design de La Mia Città : couleurs, dégradé de marque, typographie, boutons, cartes et composants." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+</head>
+<body>
+
+  <!-- Dégradé de marque pour les tracés d'icônes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="mcGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#c0163e" /><stop offset="22%" stop-color="#9c2b5c" />
+        <stop offset="40%" stop-color="#74437e" /><stop offset="60%" stop-color="#3a65ae" />
+        <stop offset="80%" stop-color="#58918c" /><stop offset="100%" stop-color="#76bc6b" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== HEADER ===== -->
+  <div class="mc-navwrap">
+    <header class="mc-nav">
+      <a class="mc-nav__brand" href="index.html" aria-label="La Mia Città, accueil">
+        <img class="mc-nav__logo" src="assets/img/logo-header.png" alt="" width="64" height="46" />
+        <span class="mc-nav__name">La Mia Città</span>
+      </a>
+      <nav class="mc-nav__links" aria-label="Navigation principale">
+        <a href="programme.html">Programme</a>
+        <a href="caffe26.html">CAFFÈ26</a>
+        <a href="carte.html">Carte</a>
+      </nav>
+      <div class="mc-nav__actions">
+        <img class="mc-nav__flag" src="assets/img/flag-fr.svg" alt="Français" width="31" height="24" />
+        <a class="mc-iconbtn" data-account href="onboarding.html" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <main class="mc-page mc-ds">
+    <div class="mc-wrap">
+
+      <div class="mc-ds-head">
+        <h1 class="mc-grad-text">Design System</h1>
+        <p>Les fondations visuelles de La Mia Città, couleurs, dégradé de marque, typographie et composants, tels qu'utilisés dans tout le site.</p>
+      </div>
+
+      <!-- 01 — COULEURS -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">01</span>
+        <h2 class="mc-ds-sec__title">Couleurs</h2>
+        <p class="mc-ds-sec__desc">Palette pilotée par des variables CSS (<code class="mc-ds-code">:root</code>). Chaque teinte est référencée par sa variable dans tout le code.</p>
+        <div class="mc-ds-grid">
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#040509"></div><div class="mc-ds-swatch__b"><strong>Très sombre</strong><code>#040509</code><small>--mc-ink</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#5b6276"></div><div class="mc-ds-swatch__b"><strong>Encre douce</strong><code>#5b6276</code><small>--mc-ink-soft</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#888898"></div><div class="mc-ds-swatch__b"><strong>Gris</strong><code>#888898</code><small>--mc-grey</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#101856"></div><div class="mc-ds-swatch__b"><strong>Navy</strong><code>#101856</code><small>--mc-navy</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#edeff5"></div><div class="mc-ds-swatch__b"><strong>Neige</strong><code>#edeff5</code><small>--mc-neige</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#c0163e"></div><div class="mc-ds-swatch__b"><strong>Rouge</strong><code>#c0163e</code><small>--mc-rouge</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#ffb114"></div><div class="mc-ds-swatch__b"><strong>JO Jaune</strong><code>#ffb114</code><small>--mc-jaune</small></div></div>
+          <div class="mc-ds-swatch"><div class="mc-ds-swatch__c" style="background:#ffffff"></div><div class="mc-ds-swatch__b"><strong>Papier</strong><code>#ffffff</code><small>--mc-paper</small></div></div>
+        </div>
+      </section>
+
+      <!-- 02 — DÉGRADÉ -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">02</span>
+        <h2 class="mc-ds-sec__title">Dégradé de marque</h2>
+        <p class="mc-ds-sec__desc">Le dégradé signature à 6 arrêts (<code class="mc-ds-code">--mc-grad</code>) traverse toute l'identité : titres, contours de boutons et de cartes, remplissages au survol.</p>
+        <div class="mc-ds-block">
+          <div class="mc-ds-gradbar"></div>
+          <div class="mc-ds-stops">
+            <div class="mc-ds-stop"><i style="background:#c0163e"></i><code>#c0163e</code></div>
+            <div class="mc-ds-stop"><i style="background:#9c2b5c"></i><code>#9c2b5c</code></div>
+            <div class="mc-ds-stop"><i style="background:#74437e"></i><code>#74437e</code></div>
+            <div class="mc-ds-stop"><i style="background:#3a65ae"></i><code>#3a65ae</code></div>
+            <div class="mc-ds-stop"><i style="background:#58918c"></i><code>#58918c</code></div>
+            <div class="mc-ds-stop"><i style="background:#76bc6b"></i><code>#76bc6b</code></div>
+          </div>
+        </div>
+        <div class="mc-ds-row" style="margin-top:18px">
+          <div class="mc-ds-block"><span class="mc-grad-text" style="font-family:var(--mc-title);font-weight:500;font-size:2rem">Texte en dégradé</span><br /><span class="mc-ds-cap">.mc-grad-text</span></div>
+          <div class="mc-ds-block"><span class="mc-pill"><span class="mc-grad-text">Contour dégradé</span></span><br /><span class="mc-ds-cap" style="margin-top:10px;display:inline-block">border-box gradient</span></div>
+        </div>
+      </section>
+
+      <!-- 03 — TYPOGRAPHIE -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">03</span>
+        <h2 class="mc-ds-sec__title">Typographie</h2>
+        <p class="mc-ds-sec__desc">Deux familles : <strong>Alio Text</strong> (titres, marque, boutons, locale) et <strong>Lexend</strong> (corps de texte, Google Fonts).</p>
+        <div class="mc-ds-block">
+          <div class="mc-ds-type">
+            <div class="mc-ds-type__sample" style="font-family:var(--mc-title);font-weight:500;font-size:clamp(2.2rem,5vw,3.6rem)">Alio Text (Medium)</div>
+            <span class="mc-ds-cap">--mc-title · titres H1/H2, marque, boutons</span>
+          </div>
+          <div class="mc-ds-type">
+            <div class="mc-ds-type__sample mc-grad-text" style="font-family:var(--mc-title);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem)">Calendrier des Épreuves</div>
+            <span class="mc-ds-cap">.mc-h2 · clamp(2.1rem … 4rem)</span>
+          </div>
+          <div class="mc-ds-type">
+            <p class="mc-ds-type__sample" style="font-family:var(--mc-body);font-weight:300;font-size:1.15rem;line-height:1.6;max-width:54ch">Lexend Light, corps de texte. Vivez Milano Cortina où que vous soyez, vibrez avec la communauté.</p>
+            <span class="mc-ds-cap">--mc-body · Light 300 (corps), Medium 500, SemiBold 600</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — ESPACEMENTS -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">04</span>
+        <h2 class="mc-ds-sec__title">Espacements</h2>
+        <p class="mc-ds-sec__desc">Échelle d'espacement (gouttières, marges, paddings, gaps). Les grandes zones utilisent des valeurs fluides <code class="mc-ds-code">clamp()</code> pour respirer selon l'écran.</p>
+        <div class="mc-ds-block mc-ds-scale">
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">4px</span><span class="mc-ds-scale__bar" style="width:12px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">8px</span><span class="mc-ds-scale__bar" style="width:24px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">12px</span><span class="mc-ds-scale__bar" style="width:36px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">16px</span><span class="mc-ds-scale__bar" style="width:48px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">20px</span><span class="mc-ds-scale__bar" style="width:60px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">24px</span><span class="mc-ds-scale__bar" style="width:72px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">32px</span><span class="mc-ds-scale__bar" style="width:96px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">48px</span><span class="mc-ds-scale__bar" style="width:144px"></span></div>
+          <div class="mc-ds-scale__row"><span class="mc-ds-scale__val">64px</span><span class="mc-ds-scale__bar" style="width:192px"></span></div>
+        </div>
+      </section>
+
+      <!-- 05 — ANGLES -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">05</span>
+        <h2 class="mc-ds-sec__title">Angles (rayons)</h2>
+        <p class="mc-ds-sec__desc">Rayons d'arrondi <code class="mc-ds-code">border-radius</code> du système : doux sur les petits éléments, généreux sur les cartes, totalement arrondi pour les pilules.</p>
+        <div class="mc-ds-radii">
+          <figure><div class="mc-ds-radii__box" style="border-radius:8px"></div><figcaption>8px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:10px"></div><figcaption>10px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:12px"></div><figcaption>12px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:14px"></div><figcaption>14px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:16px"></div><figcaption>16px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:20px"></div><figcaption>20px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:28px"></div><figcaption>28px</figcaption></figure>
+          <figure><div class="mc-ds-radii__box" style="border-radius:999px"></div><figcaption>pilule · 999px</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- 06 — LAYOUT -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">06</span>
+        <h2 class="mc-ds-sec__title">Layout &amp; conteneurs</h2>
+        <p class="mc-ds-sec__desc">Conteneur centré <code class="mc-ds-code">.mc-wrap</code>, gouttières fluides, et points de rupture responsive. Les grilles s'adaptent automatiquement.</p>
+        <div class="mc-ds-block mc-ds-layout">
+          <div>
+            <div class="mc-ds-container"><div class="mc-ds-container__inner">.mc-wrap · max-width 1140px</div></div>
+            <span class="mc-ds-cap">Conteneur centré, gouttières <code class="mc-ds-code">clamp(20px … 48px)</code></span>
+          </div>
+          <div>
+            <div class="mc-ds-bp">
+              <div class="mc-ds-bp__item"><strong>Mobile</strong><small>≤ 680px</small></div>
+              <div class="mc-ds-bp__item"><strong>Tablette</strong><small>≤ 820px</small></div>
+              <div class="mc-ds-bp__item"><strong>Desktop</strong><small>&gt; 820px</small></div>
+            </div>
+            <span class="mc-ds-cap" style="margin-top:10px;display:inline-block">Grilles fluides : <code class="mc-ds-code">repeat(auto-fill, minmax(…, 1fr))</code></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 — BOUTONS -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">07</span>
+        <h2 class="mc-ds-sec__title">Boutons</h2>
+        <p class="mc-ds-sec__desc">Tout contour est en dégradé arc-en-ciel. Au survol, les boutons passent en remplissage dégradé (texte blanc). Survolez pour voir.</p>
+        <div class="mc-ds-block">
+          <div class="mc-ds-row">
+            <a class="mc-pill" href="#"><span class="mc-grad-text">Pilule (.mc-pill)</span></a>
+            <a class="mc-cf-btn mc-cf-btn--outline" href="#" style="flex:0 0 auto"><span class="mc-grad-text">Outline</span></a>
+            <a class="mc-cf-wpbtn mc-cf-wpbtn--fill" href="#" style="flex:0 0 auto">Remplissage</a>
+            <a class="mc-cf-sidebtn" href="#" style="display:inline-flex;width:auto">Sidebtn</a>
+            <button class="mc-wp-suivre" type="button">Suivre</button>
+            <button class="mc-wp-share" type="button">Partager</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 — CHAMPS & CONTRÔLES -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">08</span>
+        <h2 class="mc-ds-sec__title">Champs &amp; contrôles</h2>
+        <p class="mc-ds-sec__desc">Champs de formulaire, interrupteur, case à cocher, barre de progression et de force.</p>
+        <div class="mc-ds-block mc-ds-stack" style="max-width:420px">
+          <label class="mc-ob-field"><span>Adresse email</span><input type="email" placeholder="nom@exemple.com" /></label>
+          <div class="mc-ds-row">
+            <span class="mc-ds-cap">Interrupteur&nbsp;:</span>
+            <span><input type="checkbox" id="ds-tog" class="mc-ac-togglecb" checked hidden /><label class="mc-ac-toggle" for="ds-tog" aria-label="Exemple"></label></span>
+            <label class="mc-ob-check"><input type="checkbox" checked /> <span>Case à cocher</span></label>
+          </div>
+          <div>
+            <div class="mc-ac-bar"><span style="width:64%"></span></div>
+            <span class="mc-ds-cap">.mc-ac-bar · progression</span>
+          </div>
+          <div>
+            <div class="mc-ob-strength"><span class="mc-ob-strength__bar"></span></div>
+            <p class="mc-ob-strength__label">Force : Modérée</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 — CARTES & PUCES -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">09</span>
+        <h2 class="mc-ds-sec__title">Cartes &amp; puces</h2>
+        <p class="mc-ds-sec__desc">Cartes à contour dégradé (stat, panneau) et puces d'état.</p>
+        <div class="mc-ds-row" style="align-items:stretch">
+          <div class="mc-cf-stat" style="min-width:150px"><span class="mc-cf-stat__num mc-grad-text">327</span><span class="mc-cf-stat__lbl">Médailles</span></div>
+          <div class="mc-ac-panel" style="min-width:240px;flex:1">
+            <div class="mc-ac-panel__head"><h3 class="mc-ac-panel__title" style="font-size:1.2rem">Panneau</h3></div>
+            <p style="font-weight:300;font-size:.85rem;color:var(--mc-ink-soft);margin:0">Conteneur à bordure arc-en-ciel (.mc-ac-panel).</p>
+          </div>
+        </div>
+        <div class="mc-ds-row" style="margin-top:18px">
+          <span class="mc-pr-tag mc-pr-tag--live"><span class="mc-pr-live__dot"></span>EN DIRECT</span>
+          <span class="mc-pr-tag mc-pr-tag--soon">○ À venir</span>
+          <span class="mc-pr-tag">Finale</span>
+          <span class="mc-cf-live" style="position:static">● LIVE</span>
+        </div>
+      </section>
+
+      <!-- 10 — ICÔNES -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">10</span>
+        <h2 class="mc-ds-sec__title">Icônes</h2>
+        <p class="mc-ds-sec__desc">Pictogrammes monochromes (noir, ou blanc sur fond coloré). Tracés SVG en ligne, jamais d'emojis colorés dans l'UI.</p>
+        <div class="mc-ds-ico">
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5" r="1.6"/><path d="M15 7v4l-2.5 2 1.5 4"/><path d="M12.5 11l-4 1.2"/><path d="M4.5 18l15-4.5"/></svg><figcaption>Ski alpin</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4v8l7 1.2c1.4.25 2.4 1 2.6 2.3"/><path d="M5 18h13"/><path d="M7 18v1.6M10.5 18v1.6M14 18v1.6"/></svg><figcaption>Patinage</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l2.5 14"/><path d="M8.5 18h6"/><circle cx="17.5" cy="16.8" r="1.2" fill="currentColor" stroke="none"/></svg><figcaption>Hockey</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="2.5" width="5" height="19" rx="2.5" transform="rotate(38 12 12)"/><circle cx="9" cy="9.5" r="0.85" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r="0.85" fill="currentColor" stroke="none"/></svg><figcaption>Snowboard</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 8L6 3M15.5 8L18 3"/><circle cx="12" cy="14.5" r="5"/><path d="M12 12.3l.8 1.6 1.8.3-1.3 1.3.3 1.8-1.6-.9-1.6.9.3-1.8-1.3-1.3 1.8-.3z" fill="currentColor" stroke="none"/></svg><figcaption>Médaille</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg><figcaption>J'aime</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><figcaption>Compte</figcaption></figure>
+          <figure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><figcaption>Lieu</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- 11 — AVATARS & DRAPEAUX -->
+      <section class="mc-ds-sec">
+        <span class="mc-ds-sec__num">11</span>
+        <h2 class="mc-ds-sec__title">Avatars &amp; drapeaux</h2>
+        <p class="mc-ds-sec__desc">Avatar dans un anneau dégradé ; drapeaux SVG monochromes en ligne pour la nationalité.</p>
+        <div class="mc-ds-row">
+          <span class="mc-ac-avatar"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+          <svg class="mc-flagimg" style="width:34px;height:24px" viewBox="0 0 3 2" role="img" aria-label="France"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect width="1" height="2" x="2" fill="#EF4135"/></svg>
+          <svg class="mc-flagimg" style="width:34px;height:24px" viewBox="0 0 3 2" role="img" aria-label="Italie"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#CE2B37"/></svg>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mc-footer">
+    <div class="mc-wrap mc-footer__inner">
+      <div class="mc-footer__top">
+        <div class="mc-footer__brand">
+          <p class="mc-footer__tagline">L'application compagnon officielle des Jeux Olympiques d'hiver Milano Cortina 2026.</p>
+          <img class="mc-footer__logo" src="assets/img/logo-footer.png" alt="Mia Città" />
+        </div>
+        <div class="mc-footer__cols">
+          <nav class="mc-footer__col" aria-label="Fonctionnalités">
+            <h4>Fonctionnalités</h4>
+            <a href="programme.html">Programme</a><a href="caffe26.html">CAFFÈ26</a><a href="carte.html">Carte Interactive</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="À propos">
+            <h4>À propos</h4>
+            <a href="#">Milano Cortina 2026</a><a href="#">Partenaires</a><a href="credits.html">Crédits</a>
+          </nav>
+          <nav class="mc-footer__col" aria-label="Support">
+            <h4>Support</h4>
+            <a href="#">FAQ</a><a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <hr class="mc-footer__line" />
+      <div class="mc-footer__legal">
+        <p>Mentions Légales<br />Accessibilité</p>
+        <p>Politique des cookies<br />Paramètres de cookies</p>
+        <p>Politique de Confidentialité<br />Conditions d'Utilisations</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/i18n.js?v=12" defer></script>
+  <script src="assets/auth.js?v=12" defer></script>
+</body>
+</html>

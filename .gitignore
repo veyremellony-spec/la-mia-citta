@@ -1,0 +1,24 @@
+# Build / déploiement (régénérables)
+dist/
+*.zip
+
+# Exports du Design System (régénérables à la demande)
+design-system.pdf
+design-system.png
+design-system-sections/
+
+# Vidéos sources lourdes — NON utilisées (les versions web légères sont versionnées)
+assets/hero.mp4
+assets/placeholder.mp4
+
+# Outillage local de prévisualisation
+.claude/
+
+# Dépendances
+node_modules/
+
+# Fichiers système / éditeur
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
